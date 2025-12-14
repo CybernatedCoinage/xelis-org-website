@@ -1,40 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import AnimatedButton from './AnimatedButton';
 import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
-
-  // Target date: Dec 13th 2025, 17:00 UTC
-  const targetDate = new Date('2025-12-14T07:20:00Z').getTime();
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = targetDate - now;
-
-      if (distance <= 0) {
-        clearInterval(timer);
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-        return;
-      }
-
-      setTimeLeft({
-        days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((distance / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((distance / (1000 * 60)) % 60),
-        seconds: Math.floor((distance / 1000) % 60),
-      });
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, [targetDate]);
-
   // Scroll handler for in-page navigation
   const handleScrollTo = (id: string) => {
     const section = document.getElementById(id);
@@ -62,39 +30,32 @@ const Hero = () => {
 
           {/* Title */}
           <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-6 animate-fade-in">
-            <span className="block mb-4 dark:text-white">Fast. Private. Scalable.</span>
-            <span className="block text-xelis-blue">Confidential BlockDAG</span>
+            <span className="block mb-4 dark:text-white">
+              Fast. Private. Scalable.
+            </span>
+            <span className="block text-xelis-blue">
+              Confidential BlockDAG
+            </span>
           </h1>
 
           {/* Description */}
           <p className="text-lg md:text-xl text-gray-600 dark:text-white mb-8 max-w-2xl mx-auto animate-fade-in animate-delay-200">
-            XELIS is a modern Layer 1 blockDAG, built to prioritize confidentiality, speed, usability, and scalability. By leveraging Homomorphic Encryption, XELIS keeps wallet balances and transaction amounts fully confidential—while maintaining publicly visible addresses. It also introduces advanced features like a high-performance Virtual Machine, powerful smart contracts, and native integration with DeFi.
-            <br /><br />Built for the people, by the people.
+            XELIS is a modern Layer 1 blockDAG, built to prioritize confidentiality,
+            speed, usability, and scalability. By leveraging Homomorphic Encryption,
+            XELIS keeps wallet balances and transaction amounts fully confidential—
+            while maintaining publicly visible addresses. It also introduces advanced
+            features like a high-performance Virtual Machine, powerful smart
+            contracts, and native integration with DeFi.
+            <br /><br />
+            Built for the people, by the people.
           </p>
 
-          {/* Countdown Section */}
-          <div className="animate-fade-in animate-delay-300 mb-12">
-            <div className="inline-block px-8 py-6 rounded-2xl border border-xelis-blue/40 dark:border-xelis-blue/60 bg-white/70 dark:bg-black/40 backdrop-blur-md shadow-[0_0_25px_rgba(2,255,207,0.2)] hover:shadow-[0_0_35px_rgba(2,255,207,0.35)] transition-shadow duration-500">
-              <h2 className="text-2xl md:text-3xl font-bold text-xelis-blue mb-4">
-                Smart Contracts on Mainnet
+          {/* Smart Contracts Live Box */}
+          <div className="animate-fade-in animate-delay-300 mb-12 px-4">
+            <div className="mx-auto max-w-full sm:max-w-xl px-6 py-6 rounded-2xl border border-xelis-blue/40 dark:border-xelis-blue/60 bg-white/70 dark:bg-black/40 backdrop-blur-md shadow-[0_0_25px_rgba(2,255,207,0.25)]">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-xelis-blue tracking-wide text-center break-words">
+                SMART CONTRACTS ARE LIVE!
               </h2>
-              <div className="flex justify-center items-center gap-6">
-                {[
-                  { label: 'Days', value: timeLeft.days },
-                  { label: 'Hours', value: timeLeft.hours },
-                  { label: 'Minutes', value: timeLeft.minutes },
-                  { label: 'Seconds', value: timeLeft.seconds },
-                ].map((item, idx) => (
-                  <div key={idx} className="text-center">
-                    <div className="text-4xl md:text-5xl font-extrabold text-xelis-blue animate-pulse">
-                      {String(item.value).padStart(2, '0')}
-                    </div>
-                    <div className="text-sm uppercase tracking-widest text-gray-600 dark:text-gray-300">
-                      {item.label}
-                    </div>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
 
@@ -120,7 +81,11 @@ const Hero = () => {
               rel="noopener noreferrer"
               className="w-full sm:w-auto"
             >
-              <AnimatedButton variant="secondary" size="lg" className="w-full sm:w-auto">
+              <AnimatedButton
+                variant="secondary"
+                size="lg"
+                className="w-full sm:w-auto"
+              >
                 Read Documentation
               </AnimatedButton>
             </a>
@@ -143,6 +108,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-
-

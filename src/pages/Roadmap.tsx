@@ -26,108 +26,122 @@ const Roadmap = () => {
 
   // Roadmap milestone data
   const roadmapMilestones = [
-    {
-      id: 1,
-      title: "Phase 1: Conceptualization",
-      date: "2021-2023",
-      completed: true,
-      items: [
-        "Project Conceptualization",
-        "BlockDAG Implementation",
-        "XSWD Websocket Communication",
-        "Client Protocol Development",
-      ]
-    },
-    {
-      id: 2,
-      title: "Phase 2: Foundation",
-      date: "Q1 2024",
-      completed: true,
-      items: [
-        "Homomorphic Encryption Integration",
-        "Kalman Filter Difficulty Adjustment",
-        "XelisHash Mining Algorithm",
-        "Block Explorer Development",
-        "Indexer and Stats tools",
-        "Documentation, APIs, and SDKs"
-      ]
-    },
-    {
-      id: 3,
-      title: "Phase 3: Launch",
-      date: "Q2 2024",
-      completed: true,
-      inProgress: false,
-      items: [
-        "Genesix GUI Wallet",
-        "Node BoostSync & FastSync",
-        "Mainnet Launch 4/20",
-        "XelishashV2 Algorithm",
-        "Network Upgrade #1",
-        "Node Status Resource",
-        "Mainnet Faucet"
-      ]
-    },
-    {
-      id: 4,
-      title: "Phase 4: Expansion",
-      date: "Q3-Q4 2024",
-      completed: true,
-      inProgress: false,
-      items: [
-        "MultiSig wallet Support",
-        "FastSync Storage Improvements",
-        "zkProof Inprovements",
-        "WhitePaper Release",
-        "P2P Key Exchange Encryption",
-        "Balance & Ownership Proofs",
-        "Genesix Update v0.0.6",
-        "Xelis Virtual Machine Enums",
-        "Xelis Pay Commerce Plugin",
-        "Merchandise Store",
-        "Xelis VM Dev. Playground",
-        "Xelis VM Shunting Yard Algo",
-        "Xelis VM Optimizations",
-        "Network Upgrade #2"
-      ]
-    },
-    {
-      id: 5,
-      title: "Phase 5: Advancement",
-      date: "Q1 2025",
-      completed: true,
-      inProgress: false,
-      items: [
-        "Smart Contracts Testnet",
-        "VS Code Extension for XVM",
-        "Genesix Wallet v0.0.7",
-        "SDKs Releases",
-        "Fiat On-Ramp Interface",
-        "Website Redesign"
-      ]
-    },
-    {
-      id: 6,
-      title: "Phase 6: Ecosystem",
-      date: "Q2 2025+",
-      completed: false,
-      inProgress: true,
-      items: [
-        "News/Blog on Website (Completed)",
-        "Database Rewrite in RocksDB (Completed)",
-        "5 Second Block Times on Testnet (Completed)",
-        "Genesix Updates: Multisig, XSWD, BioAuth, Address Book (Completed)",
-        "5 Second Block Times on Mainnet",
-        "Smart Contracts Mainnet",
-        "Xelis Decentralized Exchange",
-        "Confidential Token Minting App",
-        "Ledger Hardware Wallet Support",
-        "Xelis Quests Interactive App",
-        "Developer Bounties",
-        
-      ]
-    }
-  ];
+  {
+    id: 7,
+    title: "Phase 7: Ecosystem Growth",
+    date: "2026",
+    completed: false,
+    inProgress: true,
+    items: [
+      "Xelis Forge Decentralized Exchange",
+      "Xelis Forge Confidential Token Minting App",
+      "Xelis Forge Token Launchpad/ICO Platform",
+      "Ledger Hardware Wallet Support",
+      "Xelis Quests Interactive App",
+      "BlockDAG Improvements",
+      "Difficlty Algorithm Enhancements",
+      "Fast Sync Further Optimizations",
+      "Name Service and DNS Contracts",
+      "Decentralized Web Hosting Contracts",
+      "Smart Contract Enhancements"
+    ]
+  },
+  {
+    id: 6,
+    title: "Phase 6: Utility",
+    date: "Q2-Q4 2025",
+    completed: true,
+    inProgress: false,
+    items: [
+      "News/Blog on Website",
+      "Database Rewrite in RocksDB",
+      "5 Second Block Times",
+      "Genesix Updates: Multisig, XSWD, BioAuth, Address Book",
+      "Smart Contracts Mainnet",
+      "XelisHashV3 Algorithm"
+    ]
+  },
+  {
+    id: 5,
+    title: "Phase 5: Advancement",
+    date: "Q1 2025",
+    completed: true,
+    inProgress: false,
+    items: [
+      "Smart Contracts Testnet",
+      "VS Code Extension for XVM",
+      "Genesix Wallet v0.0.7",
+      "SDKs Releases",
+      "Fiat On-Ramp Interface",
+      "Website Redesign"
+    ]
+  },
+  {
+    id: 4,
+    title: "Phase 4: Expansion",
+    date: "Q3-Q4 2024",
+    completed: true,
+    inProgress: false,
+    items: [
+      "MultiSig wallet Support",
+      "FastSync Storage Improvements",
+      "zkProof Inprovements",
+      "WhitePaper Release",
+      "P2P Key Exchange Encryption",
+      "Balance & Ownership Proofs",
+      "Genesix Update v0.0.6",
+      "Xelis Virtual Machine Enums",
+      "Xelis Pay Commerce Plugin",
+      "Merchandise Store",
+      "Xelis VM Dev. Playground",
+      "Xelis VM Shunting Yard Algo",
+      "Xelis VM Optimizations",
+      "Network Upgrade #2"
+    ]
+  },
+  {
+    id: 3,
+    title: "Phase 3: Launch",
+    date: "Q2 2024",
+    completed: true,
+    inProgress: false,
+    items: [
+      "Genesix GUI Wallet",
+      "Node BoostSync & FastSync",
+      "Mainnet Launch 4/20",
+      "XelishashV2 Algorithm",
+      "Network Upgrade #1",
+      "Node Status Resource",
+      "Mainnet Faucet"
+    ]
+  },
+  {
+    id: 2,
+    title: "Phase 2: Foundation",
+    date: "Q1 2024",
+    completed: true,
+    items: [
+      "Homomorphic Encryption Integration",
+      "Kalman Filter Difficulty Adjustment",
+      "XelisHash Mining Algorithm",
+      "Block Explorer Development",
+      "Indexer and Stats tools",
+      "Documentation, APIs, and SDKs"
+    ]
+  },
+  {
+    id: 1,
+    title: "Phase 1: Conceptualization",
+    date: "2021-2023",
+    completed: true,
+    items: [
+      "Project Conceptualization",
+      "BlockDAG Implementation",
+      "XSWD Websocket Communication",
+      "Client Protocol Development"
+    ]
+  }
+];
 
   return (
     <div className="min-h-screen bg-white dark:bg-black">

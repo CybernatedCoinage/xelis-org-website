@@ -80,7 +80,7 @@ const Footer = () => {
                 <li><a href="/exchanges"  className="text-gray-600 dark:text-white hover:text-xelis-blue transition-colors">Exchanges</a></li>
                 <li><a href="https://linktr.ee/Xelis" target="_blank" rel="noopener noreferrer" className="text-gray-600 dark:text-white hover:text-xelis-blue transition-colors">Additional Links</a></li>
                 <li><a href="/tokenomics"  className="text-gray-600 dark:text-white hover:text-xelis-blue transition-colors">Tokenomics</a></li>
-                <li><a href="mailto:business@xelis.org" className="text-gray-600 dark:text-white hover:text-xelis-blue transition-colors">Contact: business@xelis.org</a></li>
+                <li><a href="mailto:business@xelis.org" className="text-gray-600 dark:text-white hover:text-xelis-blue transition-colors">Contact</a></li>
               </ul>
             </div>
           </div>

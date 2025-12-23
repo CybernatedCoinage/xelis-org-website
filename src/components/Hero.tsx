@@ -50,10 +50,10 @@ const Hero = () => {
             Built for the people, by the people.
           </p>
 
-          {/* Smart Contracts Live Box */}
-          <div className="animate-fade-in animate-delay-300 mb-12 px-4">
-            <div className="mx-auto max-w-full sm:max-w-xl px-6 py-6 rounded-2xl border border-xelis-blue/40 dark:border-xelis-blue/60 bg-white/70 dark:bg-black/40 backdrop-blur-md shadow-[0_0_25px_rgba(2,255,207,0.25)]">
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-xelis-blue tracking-wide text-center break-words">
+          {/* Smart Contracts Live Box (FIXED FOR MOBILE) */}
+          <div className="animate-fade-in animate-delay-300 mb-12">
+            <div className="mx-auto w-full max-w-[90vw] sm:max-w-xl px-4 sm:px-6 py-5 rounded-2xl border border-xelis-blue/40 dark:border-xelis-blue/60 bg-white/70 dark:bg-black/40 backdrop-blur-md shadow-[0_0_20px_rgba(2,255,207,0.25)] overflow-hidden">
+              <h2 className="text-lg sm:text-xl md:text-3xl font-extrabold text-xelis-blue tracking-wide text-center break-words leading-tight">
                 SMART CONTRACTS ARE LIVE!
               </h2>
             </div>

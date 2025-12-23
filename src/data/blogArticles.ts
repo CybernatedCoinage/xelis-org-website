@@ -2,7 +2,129 @@
 import { BlogArticle } from '@/types';
 
 const SAMPLE_ARTICLES1: BlogArticle[] = [
-{
+
+  {
+  id: '64',
+  title: 'The Xelis Upgrade: A Major Milestone for the Network',
+  description: 'With the successful deployment of the Xelis upgrade to mainnet, the network has taken a significant leap forward in functionality, performance, and long-term sustainability. This article breaks down the key components of the upgrade, including smart contracts, faster block times, the new XelisHash v3 algorithm, and dynamic fees and burns.',
+  content: `The successful deployment of the Xelis upgrade to mainnet marks one of the most important milestones in the project’s history. This upgrade is not just an incremental improvement, it represents a huge leap forward in functionality, utility, performance, and long-term sustainability.
+
+With the introduction of native smart contracts directly on our Layer 1 blockDAG, faster block times, the new XelisHash v3 algorithm, and a dynamic fee and burn mechanism, Xelis has significantly expanded what the network can do while reinforcing its economic and technical resilience. Below, we break down each major component of the upgrade and what it brings to the ecosystem.
+
+## Smart Contracts: Unlocking Programmability
+
+One of the most anticipated features of the Xelis upgrade is native smart contract support. This addition transforms Xelis from a purely transactional blockchain into a programmable platform capable of supporting decentralized applications (dApps), custom logic, and advanced on-chain interactions.
+
+Smart contracts enable developers to build directly on Xelis without relying on external systems or workarounds. This opens the door to use cases such as decentralized finance, confidential token launching, automated escrow, tokenized assets, governance mechanisms, and more. By integrating smart contracts at the protocol level without the necessity for Layer 2s, indexers or Roll-ups, Xelis not only proves its technical superiority but also lays the groundwork for a broader developer ecosystem and long-term innovation.
+
+At the core of Xelis smart contract functionality is the Xelis Virtual Machine (XVM) and the newly introduced Silex programming language. XVM is designed specifically for the Xelis protocol rather than adapting an existing virtual machine model, allowing tighter integration with consensus rules, state management, and resource accounting. Silex is a statically defined, strongly typed language with syntax and design principles influenced by Rust, emphasizing safety, predictability, and explicit control over execution behavior. This combination enables more efficient execution, improved optimization opportunities, and reduced overhead compared to traditional EVM-based platforms, while maintaining a developer experience that remains familiar to systems-level programmers.
+
+For developers looking to begin building, launching smart contracts or tokens. You can dive into our Developer Studio here:  
+[Developer Studio](https://playground.xelis.io)
+
+Documentation is located within the developer studio as well as located within our docs:  
+[Documentation](https://docs.xelis.io/features/smart-contracts/silex)
+
+## Faster Block Times: Improved Performance and User Experience
+
+The upgrade also introduced faster block times from 15s to 5s, significantly improving network responsiveness. Faster blocks mean quicker transaction confirmations, smoother user experiences, and greater throughput for applications built on top of the chain.
+
+For everyday users, this translates into reduced waiting times. For developers, it enables more interactive applications that can respond in near-real time. Importantly, these performance gains were achieved while maintaining network stability and security.
+
+## XelisHash v3: Strengthening Mining and Network Security
+
+XelisHash v3 represents the next evolution of the network’s proof-of-work algorithm. Designed with efficiency, fairness, and long-term sustainability in mind, the updated algorithm improves resistance to specialized hardware advantages, balances mining between CPUs and GPUs, and continues to favor decentralized participation. By refining the mining algorithm, Xelis reinforces its commitment to a healthy and competitive mining ecosystem.
+
+## Dynamic Fees and Burns: A More Adaptive Economic Model
+
+Another major enhancement is the introduction of dynamic fees combined with a burn mechanism. Instead of static fee structures, transaction fees now adapt to network conditions, ensuring fair pricing during both low and high usage periods, and preventing network spam.
+
+The burn component removes a portion of smart contract deployment fees from circulation, introducing a deflationary pressure that benefits the long-term economic health of the network, and aids in preventing spamming of the network.
+
+## Gratitude to Miners and Pool Operators
+
+No major upgrade comes without challenges, and the Xelis upgrade was no exception. During and after deployment, a few unforeseen bugs surfaced that required rapid patches, node updates, and pool-side adjustments.
+
+We would like to extend a sincere thank you to the miners and pool operators who remained patient, responsive, and supportive throughout this process. Your willingness to upgrade, troubleshoot, and adapt ensured the network remained secure and functional during a critical transition period. Your contributions are a cornerstone of Xelis’ success, and this upgrade would not have been possible without your continued commitment.
+
+For those who did not follow this same path, the upgrade also functioned as an effective filter for distinguishing between participants contributing to network integrity and those merely extracting short-term value.
+
+## Challenges Faced
+
+The primary challenge encountered during the upgrade stemmed from a miscalculation of base fees for side blocks within the BlockDAG. Because Xelis relies on zero-knowledge proofs to provide transaction confidentiality and privacy, all calculations and state transitions must be exact. Even minor inconsistencies can cause proof verification failures, which may lead nodes to reject otherwise valid blocks and result in desynchronization. This type of issue is specific to projects implementing privacy and confidentiality via advanced cryptography; on a fully public chain, it would not have manifested in the same way.
+
+Despite extensive testing, spanning more than six months on testnet, this issue did not surface until mainnet deployment. The problem only emerged under a specific combination of conditions, including real-world mining hashrate, pooled and batched mining payouts, and node-to-node latency. These conditions are difficult to reproduce in a testnet environment, which allowed the issue to remain hidden until mainnet-scale activity exposed it.
+
+The upgrade also functioned as an effective filter for distinguishing between participants contributing to network integrity and those merely extracting short-term value.
+
+## Looking Ahead
+
+The successful rollout of the Xelis upgrade marks the beginning of a new chapter. With smart contracts live, performance enhanced, mining strengthened, and token economics refined, the network is now better positioned for growth, adoption, and real-world utility.
+
+This milestone is not the end, it’s the foundation. The Xelis ecosystem is now equipped to support more developers, more users, and more ambitious ideas than ever before. The future of Xelis is confidentiality, programmable, fast, and resilient, and this upgrade is a major step toward realizing that vision.
+
+---
+
+Thank you for reading this article on **XELIS**! If you enjoyed the content and found it useful, please consider supporting my work with a tip in **Xelis ($XEL)**. Your contribution helps me keep producing quality content like this, and I genuinely appreciate your support!
+
+— **Cyber** (Telegram: \`cybernated_coinage\` | Discord: \`cybernatedcoinage\`)
+
+### Tipping Address (XELIS ONLY):
+
+\`xel:82zfcy3aa2pk2rzx6jpfnv7u3vkjcxhqs3hyghj45u9g2ccrrslsqk3vm3x\`
+
+---
+
+### 📌 Important Links:
+
+- **Xelis VM Playground:** [https://playground.xelis.io](https://playground.xelis.io)
+- **Xelis LinkTree:** [https://linktr.ee/xelis](https://linktr.ee/xelis)
+- **Website:** [https://xelis.org](https://xelis.org) (Legacy: [https://xelis.io](https://xelis.io))
+- **Documentation:** [https://docs.xelis.io](https://docs.xelis.io)
+- **Whitepaper:** [https://whitepaper.xelis.io/](https://whitepaper.xelis.io/)
+- **Github:** [https://github.com/xelis-project/](https://github.com/xelis-project/)
+- **Fiat Onramp:** [https://onramp.xelis.io](https://onramp.xelis.io)
+- **Xelis Merchandise Store (PPN):** [https://xelis.io/merch](https://xelis.io/merch) or [https://poolpartynodes.com/product-category/xelis-clothing-store/](https://poolpartynodes.com/product-category/xelis-clothing-store/)
+
+### 📢 Social Links:
+- **Telegram:** [https://t.me/xelis_io](https://t.me/xelis_io)
+- **Discord:** [https://discord.gg/xelis](https://discord.gg/xelis)
+- **Twitter/X:** [https://twitter.com/xeliscurrency](https://twitter.com/xeliscurrency)
+- **Facebook:** [https://www.facebook.com/xeliscommunity](https://www.facebook.com/xeliscommunity)
+- **TikTok:** [https://www.tiktok.com/@xeliscommunity](https://www.tiktok.com/@xeliscommunity)
+- **Instagram:** [https://www.instagram.com/xeliscommunity/](https://www.instagram.com/xeliscommunity/)
+- **LinkedIn:** [https://www.linkedin.com/company/xelis](https://www.linkedin.com/company/xelis)
+- **Reddit:** [https://www.reddit.com/r/xelis/](https://www.reddit.com/r/xelis/)
+- **YouTube:** [https://www.youtube.com/@xelis_project](https://www.youtube.com/@xelis_project)
+- **Official Medium:** [https://xeliscommunity.org](https://xeliscommunity.org)
+
+### 🔎 Explorer & Stats:
+- **Explorer:** [https://explorer.xelis.io](https://explorer.xelis.io)
+- **Stats Page:** [https://stats.xelis.io](https://stats.xelis.io)
+
+### 💰 Listings:
+- **CoinGecko:** [https://www.xelis.org/exchanges/](https://www.xelis.org/exchanges/)
+- **CoinGecko:** [https://www.coingecko.com/en/coins/xelis](https://www.coingecko.com/en/coins/xelis)
+- **LiveCoinWatch:** [https://www.livecoinwatch.com/price/XELIS-__XEL](https://www.livecoinwatch.com/price/XELIS-__XEL)
+- **CoinPaprika:** [https://coinpaprika.com/coin/xel-xelis/](https://coinpaprika.com/coin/xel-xelis/)
+
+### 🌐 Community & Tools:
+- **Community Medium:** [https://xeliscommunity.org](https://xeliscommunity.org)
+- **Wallets:** [https://www.xelis.org/resources/](https://www.xelis.org/resources/)
+- **Faucet:** [https://faucet.xelis.io](https://faucet.xelis.io)
+  `,
+  publishedDate: '2025-12-23T11:00:00Z',
+  slug: 'Successful-Major-Update-2025',
+  thumbnailUrl: '/uploads/blog/Smart_Contracts.png',
+  categories: ['Smart Contracts', 'HardFork', 'Update'],
+  author: {
+    name: 'Cyber Henry',
+    avatar: '/uploads/cyber.jpg'
+  },
+  readingTime: '5 min read',
+  likes: 45
+  },
+  {
   id: '63',
   title: 'XELIS Development Funding Fee Reduction is Here: From 10% to 5% at Block 3,250,000',
   description: 'When XELIS reaches block height 3,250,000, the protocol-defined development funding fee will automatically decrease from 10% to 5% of each block reward. This marks the increasing of mining rewards by 5%',
@@ -146,6 +268,7 @@ Thank you for reading this article on **XELIS**! If you enjoyed the content and 
   readingTime: '3 min read',
   likes: 156
 },
+
   {
   id: '62',
   title: 'SMART CONTRACTS ON XELIS MAINNET (Dec. 13th, 2025): XVM, Silex, Faster Blocks, Dynamic Fees & Burns, XelisHashV3 🚀',

@@ -3,6 +3,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Wallet, Download, Globe, Server, Shield, Clock, ArrowRight, Github, Droplet, FileText, Briefcase } from 'lucide-react';
 import AnimatedButton from '@/components/AnimatedButton';
+import MiningCalculator from '@/components/mining_calculator'; // <-- import the calculator
 
 const Resources = () => {
   // Wallet options data with all wallets now set to primary
@@ -228,48 +229,69 @@ const Resources = () => {
           </div>
         </section>
 
-        {/* How to Mine Xelis Section */}
-        <section className="container mx-auto px-4 py-12 bg-gray-50 dark:bg-black rounded-3xl mb-12">
-          <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-center dark:text-white">Mining Xelis</h2>
-          
-          <div className="max-w-4xl mx-auto glass-card p-8">
-            <div className="flex flex-col md:flex-row items-center">
-              <div className="md:w-2/3 mb-6 md:mb-0 md:pr-8">
-                <h3 className="text-xl font-semibold mb-4 dark:text-white">How to Mine Xelis</h3>
-                <p className="text-gray-600 dark:text-white mb-6">
-                  Xelis is a Proof of Work (PoW) blockchain, where mining plays a crucial role in ensuring its security. At the heart of Xelis lies decentralization, which is why we've developed a unique mining algorithm that is resistant to ASIC and FPGA mining, making it efficiently mineable only with GPUs and CPUs. Our proprietary XelisHashV2 algorithm is highly memory-intensive, yet it operates with exceptionally low energy consumption, making it one of the most energy-efficient mining algorithms ever created.
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <AnimatedButton 
-                    variant="secondary"
-                    onClick={() => window.open("https://github.com/CybernatedCoinage/How-To-Mine-Xelis/tree/main", "_blank")}
-                    className="flex items-center"
-                  >
-                    How to Mine Xelis Guide
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </AnimatedButton>
-                </div>
-              </div>
-              
-              <div className="md:w-1/3">
-                {/* Light mode image */}
-                <img 
-                  src="/uploads/Pickaxe.png" 
-                  alt="XELIS Pickaxe" 
-                  className="w-full max-w-[180px] mx-auto block dark:hidden" 
-                />
-                
-                {/* Dark mode image */}
-                <img 
-                  src="/uploads/Pickaxe2.png" 
-                  alt="XELIS Pickaxe Dark" 
-                  className="w-full max-w-[180px] mx-auto hidden dark:block" 
-                />
-              </div>
+       {/* How to Mine Xelis Section */}
+<section className="container mx-auto px-4 py-12 bg-gray-50 dark:bg-black rounded-3xl mb-12">
+  <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-center dark:text-white">
+    Mining Xelis
+  </h2>
 
-            </div>
-          </div>
-        </section>
+  {/* Text + Pickaxe Card */}
+  <div className="max-w-4xl mx-auto glass-card p-8 mb-8">
+    <div className="flex flex-col md:flex-row items-center">
+      <div className="md:w-2/3 mb-6 md:mb-0 md:pr-8">
+        <h3 className="text-xl font-semibold mb-4 dark:text-white">
+          How to Mine Xelis
+        </h3>
+        <p className="text-gray-600 dark:text-white mb-6">
+          Xelis is a Proof of Work (PoW) blockchain, where mining plays a crucial role
+          in ensuring its security. At the heart of Xelis lies decentralization, which
+          is why we've developed a unique mining algorithm that is resistant to ASIC
+          and FPGA mining, making it efficiently mineable only with GPUs and CPUs.
+          Our proprietary XelisHashV2 algorithm is highly memory-intensive, yet it
+          operates with exceptionally low energy consumption, making it one of the
+          most energy-efficient mining algorithms ever created.
+        </p>
+
+        <div className="flex flex-wrap gap-4">
+          <AnimatedButton
+            variant="secondary"
+            onClick={() =>
+              window.open(
+                "https://github.com/CybernatedCoinage/How-To-Mine-Xelis/tree/main",
+                "_blank"
+              )
+            }
+            className="flex items-center"
+          >
+            How to Mine Xelis Guide
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </AnimatedButton>
+        </div>
+      </div>
+
+      <div className="md:w-1/3">
+        {/* Light mode image */}
+        <img
+          src="/uploads/Pickaxe.png"
+          alt="XELIS Pickaxe"
+          className="w-full max-w-[180px] mx-auto block dark:hidden"
+        />
+
+        {/* Dark mode image */}
+        <img
+          src="/uploads/Pickaxe2.png"
+          alt="XELIS Pickaxe Dark"
+          className="w-full max-w-[180px] mx-auto hidden dark:block"
+        />
+      </div>
+    </div>
+  </div>
+
+  {/* Mining Calculator — SEPARATE CARD */}
+  <div className="max-w-4xl mx-auto glass-card p-8">
+    <MiningCalculator />
+  </div>
+</section>
 
         {/* Developer Resources Section */}
         <section className="container mx-auto px-4 py-12 bg-gray-50 dark:bg-black rounded-3xl mb-12">
@@ -329,3 +351,4 @@ const Resources = () => {
 };
 
 export default Resources;
+

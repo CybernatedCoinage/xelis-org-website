@@ -39,7 +39,7 @@ const Roadmap = () => {
       "Ledger Hardware Wallet Support",
       "Xelis Quests Interactive App",
       "BlockDAG Improvements",
-      "Difficlty Algorithm Enhancements",
+      "Difficulty Algorithm Enhancements",
       "Fast Sync Further Optimizations",
       "Name Service and DNS Contracts",
       "Decentralized Web Hosting Contracts",

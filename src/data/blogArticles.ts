@@ -4,6 +4,139 @@ import { BlogArticle } from '@/types';
 const SAMPLE_ARTICLES1: BlogArticle[] = [
 
   {
+  id: '65',
+  title: 'XELIS Whitepaper V2 is now released',
+  description: 'Whitepaper V2 is now released, including technical details surrounding our mainnet updates including: smart contracts, faster block times, the new XelisHash v3 algorithm, and dynamic fees and burns.',
+  content: `# Whitepaper 2.0 Is Now Live 🚀
+
+We’re excited to announce the release of **XELIS Whitepaper 2.0** — a major step forward in the evolution of the XELIS protocol.
+
+This updated whitepaper provides a deeper technical and architectural look into where XELIS is today and where it’s heading next.
+
+👉 **Read it here:** https://whitepaper.xelis.io/
+
+---
+
+## ⚡ Protocol Evolution
+
+Whitepaper 2.0 outlines the continued evolution of the XELIS protocol, detailing improvements to network architecture, scalability, and long-term sustainability.  
+
+This release reflects our commitment to building a high-performance, future-ready blockchain infrastructure designed to adapt and grow.
+
+---
+
+## 🧠 Smart Contracts & Virtual Machine
+
+One of the most anticipated additions is a deeper look into **Smart Contracts** and the **XELIS Virtual Machine (VM)**.
+
+The whitepaper explains:
+- Execution model design
+- Security considerations
+- Deterministic performance goals
+- Developer-focused architecture
+
+This marks a major milestone toward expanding the XELIS ecosystem beyond simple transactions.
+
+---
+
+## 🔥 Dynamic Fee & Burn Protocol
+
+Whitepaper 2.0 introduces an in-depth explanation of the **Dynamic Fee & Burn mechanism**, designed to:
+
+- Adjust fees intelligently based on network conditions  
+- Improve economic balance and prevent spam
+- Introduce deflationary pressure through burn mechanics  
+
+This system strengthens long-term tokenomics while maintaining network efficiency.
+
+---
+
+## ⛏️ XelisHash v3
+
+The updated whitepaper also covers **XelisHash v3**, the latest iteration of XELIS mining technology.
+
+Improvements focus on:
+- Enhanced performance  
+- Optimized fairness between GPU and CPU
+- Strengthened network security  
+
+XelisHash v3 reinforces XELIS’s commitment to decentralized and accessible mining.
+
+---
+
+## Moving Forward
+
+Whitepaper 2.0 represents more than an update — it’s a foundation for the next phase of XELIS development.
+
+We invite the community, developers, and ecosystem partners to explore the full document and join us as we continue building the future of XELIS.
+
+**Read the full Whitepaper 2.0:**  
+https://whitepaper.xelis.io/
+
+
+---
+
+Thank you for reading this article on **XELIS**! If you enjoyed the content and found it useful, please consider supporting my work with a tip in **Xelis ($XEL)**. Your contribution helps me keep producing quality content like this, and I genuinely appreciate your support!
+
+— **Cyber** (Telegram: \`cybernated_coinage\` | Discord: \`cybernatedcoinage\`)
+
+### Tipping Address (XELIS ONLY):
+
+\`xel:82zfcy3aa2pk2rzx6jpfnv7u3vkjcxhqs3hyghj45u9g2ccrrslsqk3vm3x\`
+
+---
+
+### 📌 Important Links:
+
+- **Xelis VM Playground:** [https://playground.xelis.io](https://playground.xelis.io)
+- **Xelis LinkTree:** [https://linktr.ee/xelis](https://linktr.ee/xelis)
+- **Website:** [https://xelis.org](https://xelis.org) (Legacy: [https://xelis.io](https://xelis.io))
+- **Documentation:** [https://docs.xelis.io](https://docs.xelis.io)
+- **Whitepaper:** [https://whitepaper.xelis.io/](https://whitepaper.xelis.io/)
+- **Github:** [https://github.com/xelis-project/](https://github.com/xelis-project/)
+- **Fiat Onramp:** [https://onramp.xelis.io](https://onramp.xelis.io)
+- **Xelis Merchandise Store (PPN):** [https://xelis.io/merch](https://xelis.io/merch) or [https://poolpartynodes.com/product-category/xelis-clothing-store/](https://poolpartynodes.com/product-category/xelis-clothing-store/)
+
+### 📢 Social Links:
+- **Telegram:** [https://t.me/xelis_io](https://t.me/xelis_io)
+- **Discord:** [https://discord.gg/xelis](https://discord.gg/xelis)
+- **Twitter/X:** [https://twitter.com/xeliscurrency](https://twitter.com/xeliscurrency)
+- **Facebook:** [https://www.facebook.com/xeliscommunity](https://www.facebook.com/xeliscommunity)
+- **TikTok:** [https://www.tiktok.com/@xeliscommunity](https://www.tiktok.com/@xeliscommunity)
+- **Instagram:** [https://www.instagram.com/xeliscommunity/](https://www.instagram.com/xeliscommunity/)
+- **LinkedIn:** [https://www.linkedin.com/company/xelis](https://www.linkedin.com/company/xelis)
+- **Reddit:** [https://www.reddit.com/r/xelis/](https://www.reddit.com/r/xelis/)
+- **YouTube:** [https://www.youtube.com/@xelis_project](https://www.youtube.com/@xelis_project)
+- **Official Medium:** [https://xeliscommunity.org](https://xeliscommunity.org)
+
+### 🔎 Explorer & Stats:
+- **Explorer:** [https://explorer.xelis.io](https://explorer.xelis.io)
+- **Stats Page:** [https://stats.xelis.io](https://stats.xelis.io)
+
+### 💰 Listings:
+- **CoinGecko:** [https://www.xelis.org/exchanges/](https://www.xelis.org/exchanges/)
+- **CoinGecko:** [https://www.coingecko.com/en/coins/xelis](https://www.coingecko.com/en/coins/xelis)
+- **LiveCoinWatch:** [https://www.livecoinwatch.com/price/XELIS-__XEL](https://www.livecoinwatch.com/price/XELIS-__XEL)
+- **CoinPaprika:** [https://coinpaprika.com/coin/xel-xelis/](https://coinpaprika.com/coin/xel-xelis/)
+
+### 🌐 Community & Tools:
+- **Community Medium:** [https://xeliscommunity.org](https://xeliscommunity.org)
+- **Wallets:** [https://www.xelis.org/resources/](https://www.xelis.org/resources/)
+- **Faucet:** [https://faucet.xelis.io](https://faucet.xelis.io)
+  `,
+  publishedDate: '2026-02-09T11:00:00Z',
+  slug: 'WhitepaperV2-update',
+  thumbnailUrl: '/uploads/blog/whitepaperv2.png',
+  categories: ['Feature Deepdive', 'Whitepaper', 'Update'],
+  author: {
+    name: 'Cyber Henry',
+    avatar: '/uploads/cyber.jpg'
+  },
+  readingTime: '1 min read',
+  likes: 68
+  },
+
+  {
   id: '64',
   title: 'The Xelis Upgrade: A Major Milestone for the Network',
   description: 'With the successful deployment of the Xelis upgrade to mainnet, the network has taken a significant leap forward in functionality, performance, and long-term sustainability. This article breaks down the key components of the upgrade, including smart contracts, faster block times, the new XelisHash v3 algorithm, and dynamic fees and burns.',
@@ -122,7 +255,7 @@ Thank you for reading this article on **XELIS**! If you enjoyed the content and 
     avatar: '/uploads/cyber.jpg'
   },
   readingTime: '5 min read',
-  likes: 45
+  likes: 445
   },
   {
   id: '63',

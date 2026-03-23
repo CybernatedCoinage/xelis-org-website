@@ -4,6 +4,318 @@ import { BlogArticle } from '@/types';
 const SAMPLE_ARTICLES1: BlogArticle[] = [
 
   {
+  id: '66',
+  title: 'Quietly Building: The Next Phase of XELIS',
+  description: 'It’s been a while since we’ve shared a deep update — so here’s a detailed look at what’s happening behind the scenes in the XELIS ecosystem',
+  content: `It's been a while since we've shared a deep update, so here's a detailed look at what's happening behind the scenes in the XELIS ecosystem.
+ 
+## 🔐 Stealth Addresses (Proof of Concept)
+ 
+Currently Xelis provides a very unique type of privacy that no other chain provides. Xelis and all tokens launched on Xelis natively privatize all wallet balances and transaction amounts. While this balance of transparency and privacy still allows users to see address flows and use common tools such as explorers, we are not naive in the fact that some may prefer complete privacy. As such, we are actively exploring a pre-proof-of-concept mechanism that represents a potential step forward for privacy on XELIS.
+ 
+Rather than traditional stealth addresses, this concept is closer to an off-chain "bank note" — a temporary key generated for a specific account that remains hidden until the holder chooses to spend it. The key can only be revealed at the point of spending, keeping it entirely private until that moment.
+ 
+This aims to:
+ 
+- Decouple the relationship between sender and receiver without relying on on-chain address linkage
+- Improve on-chain anonymity without sacrificing usability
+- Lay the groundwork for more advanced privacy-preserving transactions
+ 
+This is still at a very early, pre-PoC stage, but it represents a potential key direction for the protocol long-term.
+ 
+---
+
+## 🧠 Xori — Custom Database Engine
+ 
+One of the biggest internal breakthroughs has been the work beginning on Xori, a custom-built storage engine designed specifically for XELIS. Check it out here: [https://github.com/xelis-project/xori](https://github.com/xelis-project/xori)
+ 
+**Why this matters:**
+ 
+### 1. Unified Database Layer
+ 
+Instead of maintaining multiple database implementations, Xori will allow:
+ 
+- A single database abstraction
+- Plug-and-play backends (sled, RocksDB, etc.)
+- Reduced maintenance complexity across the entire codebase
+ 
+### 2. Native Versioning
+ 
+Xori is version-aware by design:
+ 
+- Historical state tracking is built-in
+- Efficient version queries
+- No need for external indexing hacks
+ 
+### 3. DAG-Aware State
+ 
+Unlike traditional linear-chain storage systems:
+ 
+- Xori supports DAG-versioned state natively
+- Enables proper handling of concurrent chain states
+- Aligns perfectly with XELIS' BlockDAG architecture
+ 
+### 4. Future Flexibility
+ 
+Xori will provide more flexibility for XELIS in the future and allow iterations to be brought on rapidly.
+ 
+This is a major piece of infrastructure that will simplify development and unlock more advanced features moving forward once implemented.
+ 
+---
+
+## ⛓️ BlockDAG Consensus Improvements
+ 
+Work is ongoing on improving the BlockDAG consensus model utilizing some of the most well-known peer-reviewed consensus mechanisms.
+ 
+Focus areas include:
+ 
+- More efficient state resolution across competing branches
+ 
+These changes are beneficial for:
+ 
+- Scalability
+- Network efficiency
+- Long-term security & stability of the protocol
+ 
+---
+
+## 🔍 Third-Party Cryptography Documentation
+ 
+XELIS has commissioned an independent documentation of all cryptography and underlying mathematics used within the protocol, conducted by a well-known cryptography firm. More to come when this is complete.
+ 
+Goals:
+ 
+- Provide transparent, formal documentation of the cryptographic primitives and math behind the code
+- Allow developers, researchers, and users to inspect and understand the foundations of XELIS cryptography
+- Lay the groundwork for future independent review and increased ecosystem confidence
+ 
+Security is a long-term commitment, and making the mathematics behind XELIS openly documented is a key step in that process.
+ 
+---
+
+## 📚 XELIS Knowledge Base (XOEI)
+ 
+The XELIS Open Education Initiative (XOEI) is being developed by community developer Highlander. See the groundwork being laid here: [https://hyperlander.github.io/xelis-education/](https://hyperlander.github.io/xelis-education/)
+ 
+This is:
+ 
+- A community-driven knowledge base
+- A developer-first educational resource
+- A place to document concepts, architecture, and tooling
+ 
+It is not a replacement for official docs, but rather:
+ 
+- A fast-moving, open contribution layer
+- A bridge between core devs and the wider builder community
+ 
+Early feedback has been very positive, and contributions are encouraged.
+ 
+---
+
+## 📦 DAGBox dApp Game
+ 
+A fully on-chain game built on XELIS is being built by developer CodeHalo, and is a great example of real ecosystem usage.
+ 
+**Core mechanics:**
+ 
+- Players choose from a set of cells (currently 16)
+- A "key cell" is selected based on contract-defined rules (including randomness)
+- Winners share the reward pool (minus a fee), proportional to stake
+ 
+**Key properties:**
+ 
+- 100% on-chain logic
+- Parimutuel reward structure
+- Reward rollover if no winner
+- Configurable ruleset (expandable beyond current implementation)
+- Supports future multi-asset gameplay
+ 
+**Interesting dynamics:**
+ 
+- Players can choose multiple cells to adjust risk/reward
+- Full coverage strategies vs high-risk single picks
+- Outcome influenced by both randomness and participant behavior
+ 
+**Technical note:**
+ 
+The system integrates with DAG-based sealing rules, meaning rounds can finalize dynamically.
+ 
+The first release of the game can be accessed here: [https://dagbox.ai/](https://dagbox.ai/) (desktop version), while improvements still need to be made to Genesix wallet dApp connectivity to improve user experience.
+ 
+---
+
+## ⚒️ Forge
+ 
+The Forge team is expected to continue to push development forward after having to balance other commitments to start the year. XelisForge will be the core platform for launching, trading, and bridging XELIS assets.
+ 
+**Work in progress:**
+ 
+- Backend for the Launchpad is complete, with frontend development coming next
+- A full roadmap will be published soon on [https://xelisforge.app](https://xelisforge.app)
+ 
+There are also ongoing discussions around:
+ 
+- Fee-sharing mechanisms tied to dApps (e.g., DAGBox)
+- Creating ecosystem-level incentives through assetization
+ 
+Forge remains a key building block in shaping XELIS into a full application ecosystem.
+ 
+---
+
+## 🔌 Relayer Standardization (Genesix / CLI / xswd-connect)
+ 
+One of the most important recent efforts has been standardizing how dApps connect to wallets and the network.
+ 
+**What's changing:**
+ 
+### 1. Unified Relayer Interface
+ 
+- Moving toward a clean, standardized relay API
+- Removing inconsistent or redundant fields (e.g., legacy channel_id)
+- Simplifying connection schemas
+ 
+### 2. Encryption Improvements
+ 
+- Updated typing and handling of encryption modes
+- More consistent end-to-end communication flow
+ 
+### 3. Cross-Component Compatibility
+ 
+Alignment between:
+ 
+- Genesix wallet
+- CLI wallet
+- xswd-connect
+- External dApps (like Forge)
+ 
+**Real progress:**
+ 
+- End-to-end testing shows seamless integration with dApps via CLI/relayer
+- Issues caused by legacy fields and dead code have been identified and fixed
+- Genesix compatibility updated via dev branches and PRs
+- Dependency issues (e.g., flutter\\_secure\\_storage, C++ JSON deprecations) resolved
+ 
+**Why this matters:**
+ 
+This work:
+ 
+- Dramatically improves developer experience
+- Makes dApp integration predictable and stable
+- Reduces friction between wallet ↔ app communication
+- Enables richer application-layer innovation
+ 
+---
+
+## 🎮 UX Learnings (dApps & Wallets)
+ 
+Through testing (especially with Xelis Tokens & DAGBox), we've learned:
+ 
+- Desktop experience is smooth and intuitive
+- Mobile introduces real challenges:
+  - App switching friction
+  - Browser sleep killing WebSocket connections
+  - Initial connection UX complexity
+ 
+Decoding the cryptography of large balances of Xelis Assets on mobile needs improvement, as the time it takes is prohibitive for users. ECDLP optimization is necessary to provide:
+ 
+- Lightning-fast balance decoding
+- Smoother user experience for power users
+- Enhanced performance for Forge and other Xelis applications
+ 
+This is now an active area of focus — especially for gaming and real-time dApps.
+
+---
+
+## 🧩 Whitepaper V2
+ 
+Earlier this year we released the XELIS Whitepaper 2.0, a major step forward in the evolution of the XELIS protocol.
+ 
+This updated whitepaper provided a deeper technical and architectural look into where XELIS is today and where it's heading next, including the continued evolution of the XELIS protocol, detailing improvements to network architecture, scalability, and long-term sustainability.
+ 
+👉 Read it here: [https://whitepaper.xelis.io/](https://whitepaper.xelis.io/)
+ 
+---
+
+## 💬 Final Thoughts
+ 
+A lot of this work isn't immediately visible, but it's foundational.
+ 
+We are:
+ 
+- Building custom infrastructure (Xori)
+- Refining core protocol mechanics (BlockDAG)
+- Standardizing developer interfaces (Relayer)
+- Expanding real use cases (DAGBox, Forge)
+- Improving education (XOEI)
+- Strengthening privacy and security
+ 
+This is what long-term ecosystem building looks like.
+ 
+More soon, and as always, feedback and contributions from the community are what push XELIS forward.
+
+
+---
+
+Thank you for reading this article on **XELIS**! If you enjoyed the content and found it useful, please consider supporting my work with a tip in **Xelis ($XEL)**. Your contribution helps me keep producing quality content like this, and I genuinely appreciate your support!
+
+— **Cyber** (Telegram: \`cybernated_coinage\` | Discord: \`cybernatedcoinage\`)
+
+### Tipping Address (XELIS ONLY):
+
+\`xel:82zfcy3aa2pk2rzx6jpfnv7u3vkjcxhqs3hyghj45u9g2ccrrslsqk3vm3x\`
+
+---
+
+### 📌 Important Links:
+
+- **Xelis VM Playground:** [https://playground.xelis.io](https://playground.xelis.io)
+- **Xelis LinkTree:** [https://linktr.ee/xelis](https://linktr.ee/xelis)
+- **Website:** [https://xelis.org](https://xelis.org) (Legacy: [https://xelis.io](https://xelis.io))
+- **Documentation:** [https://docs.xelis.io](https://docs.xelis.io)
+- **Whitepaper:** [https://whitepaper.xelis.io/](https://whitepaper.xelis.io/)
+- **Github:** [https://github.com/xelis-project/](https://github.com/xelis-project/)
+- **Fiat Onramp:** [https://onramp.xelis.io](https://onramp.xelis.io)
+- **Xelis Merchandise Store (PPN):** [https://xelis.io/merch](https://xelis.io/merch) or [https://poolpartynodes.com/product-category/xelis-clothing-store/](https://poolpartynodes.com/product-category/xelis-clothing-store/)
+
+### 📢 Social Links:
+- **Telegram:** [https://t.me/xelis_io](https://t.me/xelis_io)
+- **Discord:** [https://discord.gg/xelis](https://discord.gg/xelis)
+- **Twitter/X:** [https://twitter.com/xeliscurrency](https://twitter.com/xeliscurrency)
+- **Facebook:** [https://www.facebook.com/xeliscommunity](https://www.facebook.com/xeliscommunity)
+- **TikTok:** [https://www.tiktok.com/@xeliscommunity](https://www.tiktok.com/@xeliscommunity)
+- **Instagram:** [https://www.instagram.com/xeliscommunity/](https://www.instagram.com/xeliscommunity/)
+- **LinkedIn:** [https://www.linkedin.com/company/xelis](https://www.linkedin.com/company/xelis)
+- **Reddit:** [https://www.reddit.com/r/xelis/](https://www.reddit.com/r/xelis/)
+- **YouTube:** [https://www.youtube.com/@xelis_project](https://www.youtube.com/@xelis_project)
+- **Official Medium:** [https://xeliscommunity.org](https://xeliscommunity.org)
+
+### 🔎 Explorer & Stats:
+- **Explorer:** [https://explorer.xelis.io](https://explorer.xelis.io)
+- **Stats Page:** [https://stats.xelis.io](https://stats.xelis.io)
+
+### 💰 Listings:
+- **CoinGecko:** [https://www.xelis.org/exchanges/](https://www.xelis.org/exchanges/)
+- **CoinGecko:** [https://www.coingecko.com/en/coins/xelis](https://www.coingecko.com/en/coins/xelis)
+- **LiveCoinWatch:** [https://www.livecoinwatch.com/price/XELIS-__XEL](https://www.livecoinwatch.com/price/XELIS-__XEL)
+- **CoinPaprika:** [https://coinpaprika.com/coin/xel-xelis/](https://coinpaprika.com/coin/xel-xelis/)
+
+### 🌐 Community & Tools:
+- **Community Medium:** [https://xeliscommunity.org](https://xeliscommunity.org)
+- **Wallets:** [https://www.xelis.org/resources/](https://www.xelis.org/resources/)
+- **Faucet:** [https://faucet.xelis.io](https://faucet.xelis.io)
+  `,
+  publishedDate: '2026-03-23T09:00:00Z',
+  slug: 'Spring-Progress-Update-2026',
+  thumbnailUrl: '/uploads/blog/xelis_infographic_final.png',
+  categories: ['Progress Report', 'Feature Deepdive', 'Update'],
+  author: {
+    name: 'Cyber Henry',
+    avatar: '/uploads/cyber.jpg'
+  },
+  readingTime: '6 min read',
+  likes: 123
+  },
+  {
   id: '65',
   title: 'XELIS Whitepaper V2 is now released',
   description: 'Whitepaper V2 is now released, including technical details surrounding our mainnet updates including: smart contracts, faster block times, the new XelisHash v3 algorithm, and dynamic fees and burns.',

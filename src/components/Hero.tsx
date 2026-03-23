@@ -42,7 +42,7 @@ const Hero = () => {
           <p className="text-lg md:text-xl text-gray-600 dark:text-white mb-8 max-w-2xl mx-auto animate-fade-in animate-delay-200">
             XELIS is a modern Layer 1 blockDAG, built to prioritize confidentiality,
             speed, usability, and scalability. By leveraging Homomorphic Encryption,
-            XELIS keeps wallet balances and transaction amounts fully confidential—
+            XELIS keeps wallet balances and transaction amounts fully confidential,
             while maintaining publicly visible addresses. It also introduces advanced
             features like a high-performance Virtual Machine, powerful smart
             contracts, and native integration with DeFi.
@@ -50,14 +50,18 @@ const Hero = () => {
             Built for the people, by the people.
           </p>
 
-          {/* Smart Contracts Live Box (FIXED FOR MOBILE) */}
-          <div className="animate-fade-in animate-delay-300 mb-12">
-            <div className="mx-auto w-full max-w-[90vw] sm:max-w-xl px-4 sm:px-6 py-5 rounded-2xl border border-xelis-blue/40 dark:border-xelis-blue/60 bg-white/70 dark:bg-black/40 backdrop-blur-md shadow-[0_0_20px_rgba(2,255,207,0.25)] overflow-hidden">
-              <h2 className="text-lg sm:text-xl md:text-3xl font-extrabold text-xelis-blue tracking-wide text-center break-words leading-tight">
-                SMART CONTRACTS ARE LIVE!
-              </h2>
-            </div>
-          </div>
+          {/* Ecosystem CTA Box */}
+<div className="animate-fade-in animate-delay-300 mb-12">
+  <div
+    onClick={() => window.location.href = '/ecosystem'}
+    className="group cursor-pointer mx-auto w-full max-w-[90vw] sm:max-w-xl px-4 sm:px-6 py-5 rounded-2xl border border-xelis-blue/40 dark:border-xelis-blue/60 bg-white/70 dark:bg-black/40 backdrop-blur-md shadow-[0_0_20px_rgba(2,255,207,0.25)] overflow-hidden flex items-center justify-center gap-3 hover:bg-xelis-blue/10 hover:border-xelis-blue transition-all duration-300 hover:shadow-[0_0_30px_rgba(2,255,207,0.45)]"
+  >
+    <h2 className="text-lg sm:text-xl md:text-3xl font-extrabold text-xelis-blue tracking-wide text-center break-words leading-tight">
+      Explore Our Ecosystem
+    </h2>
+    <ArrowRight className="h-6 w-6 text-xelis-blue flex-shrink-0 group-hover:translate-x-1 transition-transform duration-300" />
+  </div>
+</div>
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in animate-delay-400 w-full">

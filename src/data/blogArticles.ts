@@ -306,7 +306,7 @@ Thank you for reading this article on **XELIS**! If you enjoyed the content and 
   `,
   publishedDate: '2026-03-23T09:00:00Z',
   slug: 'Spring-Progress-Update-2026',
-  thumbnailUrl: '/uploads/blog/xelis_infographic_final.png',
+  thumbnailUrl: '/uploads/blog/infographic_xel.png',
   categories: ['Progress Report', 'Feature Deepdive', 'Update'],
   author: {
     name: 'Cyber Henry',

@@ -52,7 +52,7 @@ const About = () => {
 
             <div className="space-y-6 text-gray-600 dark:text-white">
               <p>
-                XELIS is a next-generation Layer 1 blockchain engineered for privacy,
+                XELIS is a next-generation Layer 1 blockDAG (parallel block blockchain) engineered for speed, privacy,
                 scalability, and real-world usability. Built on a fully decentralized
                 and immutable ledger, XELIS ensures data integrity, security, and
                 trustless transactions—without compromising confidentiality.
@@ -69,7 +69,7 @@ const About = () => {
               <p>
                 With a high-performance Virtual Machine, programmable smart contracts,
                 and innovative consensus and transaction architecture, XELIS goes
-                beyond the limitations of earlier privacy networks.
+                beyond the limitations of earlier privacy networks. XELIS is the first project in the world to be able to bring together the speed of a blockDAG, with privacy technology, and fully functional smart contracts & virtual machine.
               </p>
 
               <div className="pt-4 flex flex-wrap gap-4">

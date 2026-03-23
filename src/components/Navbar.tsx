@@ -91,7 +91,7 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
           <button onClick={() => handleNavClick('about')} className="link-hover font-medium dark:text-white">About</button>
-          <button onClick={() => handleNavClick('features')} className="link-hover font-medium dark:text-white">Features</button>
+          <Link to="/ecosystem" className="link-hover font-medium dark:text-white">Ecosystem</Link>
           <Link to="/blog" className="link-hover font-medium dark:text-white">News</Link>
           <Link to="/roadmap" className="link-hover font-medium dark:text-white">Roadmap</Link>
           <Link to="/exchanges" className="link-hover font-medium dark:text-white">Exchanges</Link>
@@ -125,8 +125,8 @@ const Navbar = () => {
         isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
       )}>
         <div className="container mx-auto px-4 flex flex-col space-y-3 text-center dark:text-white overflow-y-auto max-h-[80vh] pt-10">
-          <button onClick={() => handleNavClick('features')} className="text-base py-2">Features</button>
           <button onClick={() => handleNavClick('about')} className="text-base py-2">About</button>
+          <Link to="/ecosystem" className="text-base py-2" onClick={() => setIsMobileMenuOpen(false)}>Ecosystem</Link>
           <Link to="/blog" className="text-base py-2" onClick={() => setIsMobileMenuOpen(false)}>News</Link>
           <Link to="/roadmap" className="text-base py-2" onClick={() => setIsMobileMenuOpen(false)}>Roadmap</Link>
           <Link to="/exchanges" className="text-base py-2" onClick={() => setIsMobileMenuOpen(false)}>Exchanges</Link>
